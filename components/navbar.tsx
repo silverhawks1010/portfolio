@@ -1,3 +1,4 @@
+"use client";
 import {
   Navbar as HeroUINavbar,
   NavbarContent,
@@ -15,6 +16,7 @@ import Image from "next/image";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
+import { addToast } from "@heroui/toast";
 
 export const Navbar = () => {
   return (
@@ -55,9 +57,16 @@ export const Navbar = () => {
         <NavbarItem className="hidden md:flex">
           <Button
             className="text-sm font-normal text-default-600 bg-default-100"
-            href={siteConfig.links.sponsor}
+            href="/"
             startContent={<GrContact className="text-danger" />}
             variant="flat"
+            onPress={() =>
+              addToast({
+                title: "Erreur",
+                description: "Le formulaire de contact est en développement !",
+                color: "danger",
+              })
+            }
           >
             Contact
           </Button>

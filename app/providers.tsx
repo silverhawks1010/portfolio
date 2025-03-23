@@ -6,6 +6,8 @@ import * as React from "react";
 import { HeroUIProvider } from "@heroui/system";
 import { useRouter } from "next/navigation";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import {ToastProvider} from "@heroui/toast";
 
 export interface ProvidersProps {
   children: React.ReactNode;
@@ -25,6 +27,8 @@ export function Providers({ children, themeProps }: ProvidersProps) {
 
   return (
     <HeroUIProvider navigate={router.push}>
+      <SpeedInsights />
+      <ToastProvider />
       <NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
     </HeroUIProvider>
   );
