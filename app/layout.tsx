@@ -2,14 +2,14 @@ import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import { Link } from "@heroui/link";
 import clsx from "clsx";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { ThemeSwitch } from "@/components/theme-switch";
 
 export const metadata: Metadata = {
@@ -36,8 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning lang="en">
-      <head />
+    <html suppressHydrationWarning lang="fr">
       <body
         className={clsx(
           "min-h-screen bg-background font-sans antialiased",

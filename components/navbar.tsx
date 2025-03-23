@@ -7,15 +7,14 @@ import {
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
 import NextLink from "next/link";
-
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { GrContact } from "react-icons/gr";
+import Image from "next/image";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
-import Image from "next/image";
 
 export const Navbar = () => {
   return (
@@ -23,7 +22,7 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Image src="/logo.png" alt="Logo" width={64} height={64} />
+            <Image alt="Logo" height={64} src="/logo.png" width={64} />
             <p className="font-bold text-inherit">Kévin Maublanc</p>
           </NextLink>
         </NavbarBrand>

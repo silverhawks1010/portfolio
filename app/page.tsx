@@ -5,9 +5,6 @@ import { Code } from "@heroui/code";
 import { button as buttonStyles } from "@heroui/theme";
 import { Accordion, AccordionItem } from "@heroui/accordion";
 import { Chip } from "@heroui/chip";
-
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
@@ -15,9 +12,10 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import { Avatar } from "@heroui/avatar";
 import { Spacer } from "@heroui/spacer";
 import { Divider } from "@heroui/divider";
-import { Card, CardHeader, CardBody, CardFooter } from "@heroui/card";
-import { Button } from "@heroui/button";
+import { Card, CardHeader, CardBody } from "@heroui/card";
 import { Image } from "@heroui/image";
+
+import { title, subtitle } from "@/components/primitives";
 
 export default function Home() {
   return (
@@ -79,7 +77,7 @@ export default function Home() {
             </Snippet>
           </div>
         </div>
-        <Avatar src="/moi.png" alt="hero" className="w-1/5 h-1/3" isBordered />
+        <Avatar isBordered alt="hero" className="w-1/5 h-1/3" src="/moi.png" />
       </div>
       <Spacer y={10} />
       <Divider />
@@ -112,10 +110,10 @@ export default function Home() {
           <Chip color="primary" size="sm">
             React
           </Chip>{" "}
-          <Chip size="sm" color="primary">
+          <Chip color="primary" size="sm">
             Next.js
           </Chip>{" "}
-          <Chip size="sm" color="primary">
+          <Chip color="primary" size="sm">
             TailwindCSS
           </Chip>
           <Chip color="primary" size="sm">
@@ -128,7 +126,7 @@ export default function Home() {
           </Chip>
           <Spacer y={2} />
           <p className="text-md">Accès : </p>
-          <Link isExternal isDisabled href="https://meetsync.vercel.app">
+          <Link isDisabled isExternal href="https://meetsync.vercel.app">
             {" "}
             <FaExternalLinkAlt /> <Spacer x={1} /> Lien vers le site
           </Link>
@@ -158,10 +156,10 @@ export default function Home() {
           <Chip color="primary" size="sm">
             React
           </Chip>{" "}
-          <Chip size="sm" color="primary">
+          <Chip color="primary" size="sm">
             Next.js
           </Chip>{" "}
-          <Chip size="sm" color="primary">
+          <Chip color="primary" size="sm">
             TailwindCSS
           </Chip>
           <Chip color="primary" size="sm">
@@ -174,12 +172,12 @@ export default function Home() {
           </Chip>
           <Spacer y={2} />
           <p className="text-md">Accès : </p>
-          <Link isExternal isDisabled href="">
+          <Link isDisabled isExternal href="">
             {" "}
             <FaExternalLinkAlt /> <Spacer x={1} /> Lien vers le site
           </Link>
           <br />
-          <Link isExternal isDisabled href="">
+          <Link isDisabled isExternal href="">
             {" "}
             <FaGithub /> <Spacer x={1} /> Lien vers le github
           </Link>
@@ -208,7 +206,7 @@ export default function Home() {
           <Chip color="primary" size="sm">
             C#
           </Chip>{" "}
-          <Chip size="sm" color="primary">
+          <Chip color="primary" size="sm">
             Unity
           </Chip>
           <Spacer y={2} />
@@ -218,7 +216,7 @@ export default function Home() {
           </Chip>
           <Spacer y={2} />
           <p className="text-md">Accès : </p>
-          <Link isExternal isDisabled href="https://meetsync.vercel.app">
+          <Link isDisabled isExternal href="https://meetsync.vercel.app">
             {" "}
             <FaExternalLinkAlt /> <Spacer x={1} /> Aucun Accès actuellement
             disponible
