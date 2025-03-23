@@ -101,12 +101,12 @@ export default function Home() {
               src=""
             />
           }
-          subtitle="Site internet de gestion d'événements en ligne"
+          subtitle="Site internet de gestion d&apos;événements en ligne"
           title="MeetSync"
         >
           <p className="text-md">Description :</p>
-          <p className="text-sm">MeetSync est un site internet de gestion d'événements en ligne. Il permet de créer des
-            événements, d'inviter simplement les personne avec un email et un nom et de définir le lieu et le prix de
+          <p className="text-sm">MeetSync est un site internet de gestion d&apos;événements en ligne. Il permet de créer des
+            événements, d&apos;inviter simplement les personne avec un email et un nom et de définir le lieu et le prix de
             celui-ci.</p>
           <Spacer y={2} />
           <p className="text-md">Technologies utilisées :</p>
@@ -125,7 +125,7 @@ export default function Home() {
             le github</Link>
         </AccordionItem>
         <AccordionItem
-          aria-label="Gam'Ex"
+          aria-label="Gam&apos;Ex"
           startContent={
             <Avatar
               isBordered
@@ -135,10 +135,10 @@ export default function Home() {
             />
           }
           subtitle="Site internet de gestion de liste de jeux vidéos."
-          title="Gam'Ex"
+          title="Gam&apos;Ex"
         >
           <p className="text-md">Description :</p>
-          <p className="text-sm">Gam'Ex est un site internet regroupant tout les jeux vidéo regroupant de nombreuses
+          <p className="text-sm">Gam&apos;Ex est un site internet regroupant tout les jeux vidéo regroupant de nombreuses
             information et permettant aux utilisateur des liste de jeux personalisé pour prévoir les futurs jeux auquels
             ils joueront ou crée des tiers list.</p>
           <Spacer y={2} />
@@ -159,7 +159,7 @@ export default function Home() {
 
         </AccordionItem>
         <AccordionItem
-          aria-label="Cap'Tain"
+          aria-label="Cap&apos;Tain"
           startContent={
             <Avatar
               isBordered
@@ -173,10 +173,10 @@ export default function Home() {
               Petit jeu indépendant de bataille navale basé sur le thème de la piraterie.
             </p>
           }
-          title="Cap'Tain"
+          title="Cap&apos;Tain"
         >
           <p className="text-md">Description :</p>
-          <p className="text-sm">Cap'Tain est un jeu indépendant de bataille naval jouable en solo contre l'ia ou contre
+          <p className="text-sm">Cap&apos;Tain est un jeu indépendant de bataille naval jouable en solo contre l&apos;ia ou contre
             des amis dans une partie multijoueur local sur deux appareil distinct.</p>
           <Spacer y={2} />
           <p className="text-md">Technologies utilisées :</p>
