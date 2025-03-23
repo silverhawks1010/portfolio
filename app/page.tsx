@@ -1,10 +1,10 @@
-"use client"
+"use client";
 import { Link } from "@heroui/link";
 import { Snippet } from "@heroui/snippet";
 import { Code } from "@heroui/code";
 import { button as buttonStyles } from "@heroui/theme";
-import {Accordion, AccordionItem} from "@heroui/accordion";
-import {Chip} from "@heroui/chip";
+import { Accordion, AccordionItem } from "@heroui/accordion";
+import { Chip } from "@heroui/chip";
 
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
@@ -12,12 +12,12 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import {Avatar} from "@heroui/avatar";
-import {Spacer} from "@heroui/spacer";
+import { Avatar } from "@heroui/avatar";
+import { Spacer } from "@heroui/spacer";
 import { Divider } from "@heroui/divider";
-import {Card, CardHeader, CardBody, CardFooter} from "@heroui/card";
-import {Button} from "@heroui/button";
-import {Image} from "@heroui/image";
+import { Card, CardHeader, CardBody, CardFooter } from "@heroui/card";
+import { Button } from "@heroui/button";
+import { Image } from "@heroui/image";
 
 export default function Home() {
   return (
@@ -72,13 +72,14 @@ export default function Home() {
 
           <div className="mt-8">
             <Snippet hideCopyButton hideSymbol variant="bordered">
-          <span>
-            Me contacter : <Code color="primary">kevmaublanc@gmail.com</Code>
-          </span>
+              <span>
+                Me contacter :{" "}
+                <Code color="primary">kevmaublanc@gmail.com</Code>
+              </span>
             </Snippet>
           </div>
         </div>
-        <Avatar src="/moi.png" alt="hero" size="xl" isBordered />
+        <Avatar src="/moi.png" alt="hero" className="w-1/5 h-1/3" isBordered />
       </div>
       <Spacer y={10} />
       <Divider />
@@ -94,102 +95,135 @@ export default function Home() {
         <AccordionItem
           aria-label="MeetSync"
           startContent={
-            <Avatar
-              isBordered
-              color="primary"
-              radius="lg"
-              src=""
-            />
+            <Avatar isBordered color="primary" radius="lg" src="" />
           }
-          subtitle="Site internet de gestion d&apos;événements en ligne"
+          subtitle="Site internet de gestion d'événements en ligne"
           title="MeetSync"
         >
           <p className="text-md">Description :</p>
-          <p className="text-sm">MeetSync est un site internet de gestion d&apos;événements en ligne. Il permet de créer des
-            événements, d&apos;inviter simplement les personne avec un email et un nom et de définir le lieu et le prix de
-            celui-ci.</p>
+          <p className="text-sm">
+            MeetSync est un site internet de gestion d&apos;événements en ligne.
+            Il permet de créer des événements, d&apos;inviter simplement les
+            personne avec un email et un nom et de définir le lieu et le prix de
+            celui-ci.
+          </p>
           <Spacer y={2} />
           <p className="text-md">Technologies utilisées :</p>
-          <Chip color="primary" size="sm">React</Chip> <Chip size="sm" color="primary">Next.js</Chip> <Chip size="sm"
-                                                                                                            color="primary">TailwindCSS</Chip>
-          <Chip color="primary" size="sm">Supabase</Chip>
+          <Chip color="primary" size="sm">
+            React
+          </Chip>{" "}
+          <Chip size="sm" color="primary">
+            Next.js
+          </Chip>{" "}
+          <Chip size="sm" color="primary">
+            TailwindCSS
+          </Chip>
+          <Chip color="primary" size="sm">
+            Supabase
+          </Chip>
           <Spacer y={2} />
           <p className="text-md">Status : </p>
-          <Chip color="warning" size="sm">En cours de développement</Chip>
+          <Chip color="warning" size="sm">
+            En cours de développement
+          </Chip>
           <Spacer y={2} />
           <p className="text-md">Accès : </p>
-          <Link isExternal isDisabled href="https://meetsync.vercel.app"> <FaExternalLinkAlt /> <Spacer x={1} /> Lien
-            vers le site</Link>
+          <Link isExternal isDisabled href="https://meetsync.vercel.app">
+            {" "}
+            <FaExternalLinkAlt /> <Spacer x={1} /> Lien vers le site
+          </Link>
           <br />
-          <Link isExternal href="https://github.com/meetsync-esieeit/meetsync"> <FaGithub /> <Spacer x={1} /> Lien vers
-            le github</Link>
+          <Link isExternal href="https://github.com/meetsync-esieeit/meetsync">
+            {" "}
+            <FaGithub /> <Spacer x={1} /> Lien vers le github
+          </Link>
         </AccordionItem>
         <AccordionItem
-          aria-label="Gam&apos;Ex"
+          aria-label="Gam'Ex"
           startContent={
-            <Avatar
-              isBordered
-              color="secondary"
-              radius="lg"
-              src=""
-            />
+            <Avatar isBordered color="secondary" radius="lg" src="" />
           }
           subtitle="Site internet de gestion de liste de jeux vidéos."
-          title="Gam&apos;Ex"
+          title="Gam'Ex"
         >
           <p className="text-md">Description :</p>
-          <p className="text-sm">Gam&apos;Ex est un site internet regroupant tout les jeux vidéo regroupant de nombreuses
-            information et permettant aux utilisateur des liste de jeux personalisé pour prévoir les futurs jeux auquels
-            ils joueront ou crée des tiers list.</p>
+          <p className="text-sm">
+            Gam&apos;Ex est un site internet regroupant tout les jeux vidéo
+            regroupant de nombreuses information et permettant aux utilisateur
+            des liste de jeux personalisé pour prévoir les futurs jeux auquels
+            ils joueront ou crée des tiers list.
+          </p>
           <Spacer y={2} />
           <p className="text-md">Technologies utilisées :</p>
-          <Chip color="primary" size="sm">React</Chip> <Chip size="sm" color="primary">Next.js</Chip> <Chip size="sm"
-                                                                                                            color="primary">TailwindCSS</Chip>
-          <Chip color="primary" size="sm">Supabase</Chip>
+          <Chip color="primary" size="sm">
+            React
+          </Chip>{" "}
+          <Chip size="sm" color="primary">
+            Next.js
+          </Chip>{" "}
+          <Chip size="sm" color="primary">
+            TailwindCSS
+          </Chip>
+          <Chip color="primary" size="sm">
+            Supabase
+          </Chip>
           <Spacer y={2} />
           <p className="text-md">Status : </p>
-          <Chip color="default" size="sm">Projet naissant</Chip>
+          <Chip color="default" size="sm">
+            Projet naissant
+          </Chip>
           <Spacer y={2} />
           <p className="text-md">Accès : </p>
-          <Link isExternal isDisabled href=""> <FaExternalLinkAlt /> <Spacer x={1} /> Lien
-            vers le site</Link>
+          <Link isExternal isDisabled href="">
+            {" "}
+            <FaExternalLinkAlt /> <Spacer x={1} /> Lien vers le site
+          </Link>
           <br />
-          <Link isExternal isDisabled href=""> <FaGithub /> <Spacer x={1} /> Lien vers
-            le github</Link>
-
+          <Link isExternal isDisabled href="">
+            {" "}
+            <FaGithub /> <Spacer x={1} /> Lien vers le github
+          </Link>
         </AccordionItem>
         <AccordionItem
-          aria-label="Cap&apos;Tain"
+          aria-label="Cap'Tain"
           startContent={
-            <Avatar
-              isBordered
-              color="warning"
-              radius="lg"
-              src="/captain.png"
-            />
+            <Avatar isBordered color="warning" radius="lg" src="/captain.png" />
           }
           subtitle={
             <p className="flex">
-              Petit jeu indépendant de bataille navale basé sur le thème de la piraterie.
+              Petit jeu indépendant de bataille navale basé sur le thème de la
+              piraterie.
             </p>
           }
-          title="Cap&apos;Tain"
+          title="Cap'Tain"
         >
           <p className="text-md">Description :</p>
-          <p className="text-sm">Cap&apos;Tain est un jeu indépendant de bataille naval jouable en solo contre l&apos;ia ou contre
-            des amis dans une partie multijoueur local sur deux appareil distinct.</p>
+          <p className="text-sm">
+            Cap&apos;Tain est un jeu indépendant de bataille naval jouable en
+            solo contre l&apos;ia ou contre des amis dans une partie multijoueur
+            local sur deux appareil distinct.
+          </p>
           <Spacer y={2} />
           <p className="text-md">Technologies utilisées :</p>
-          <Chip color="primary" size="sm">C#</Chip> <Chip size="sm" color="primary">Unity</Chip>
+          <Chip color="primary" size="sm">
+            C#
+          </Chip>{" "}
+          <Chip size="sm" color="primary">
+            Unity
+          </Chip>
           <Spacer y={2} />
           <p className="text-md">Status : </p>
-          <Chip color="warning" size="sm">En cours de développement</Chip>
+          <Chip color="warning" size="sm">
+            En cours de développement
+          </Chip>
           <Spacer y={2} />
           <p className="text-md">Accès : </p>
-          <Link isExternal isDisabled href="https://meetsync.vercel.app"> <FaExternalLinkAlt /> <Spacer x={1} /> Aucun
-            Accès actuellement disponible</Link>
+          <Link isExternal isDisabled href="https://meetsync.vercel.app">
+            {" "}
+            <FaExternalLinkAlt /> <Spacer x={1} /> Aucun Accès actuellement
+            disponible
+          </Link>
           <br />
-
         </AccordionItem>
       </Accordion>
       <Spacer y={10} />
@@ -205,7 +239,9 @@ export default function Home() {
           <Card className="col-span-12 sm:col-span-4 h-[300px]">
             <CardHeader className="z-10 top-1 flex-col !items-start">
               <h4 className="font-medium text-large">Développeur Web</h4>
-              <p className="text-tiny uppercase font-bold">Next.JS, Tailwind Css, HeroUI, Django, Node JS</p>
+              <p className="text-tiny uppercase font-bold">
+                Next.JS, Tailwind Css, HeroUI, Django, Node JS
+              </p>
             </CardHeader>
             <CardBody>
               <Image
@@ -215,14 +251,13 @@ export default function Home() {
                 src="/webdesign.jpg"
               />
             </CardBody>
-
           </Card>
           <Card className="col-span-12 sm:col-span-4 h-[300px]">
             <CardHeader className="z-10 top-1 flex-col !items-start">
-
               <h4 className="font-medium text-large">Développeur Logiciel</h4>
-              <p className="text-tiny uppercase font-bold">Java, Python, C, C#</p>
-
+              <p className="text-tiny uppercase font-bold">
+                Java, Python, C, C#
+              </p>
             </CardHeader>
             <CardBody>
               <Image
@@ -232,12 +267,13 @@ export default function Home() {
                 src="/software.jpg"
               />
             </CardBody>
-
           </Card>
           <Card className="col-span-12 sm:col-span-4 h-[300px]">
             <CardHeader className="z-10 top-1 flex-col !items-start">
               <h4 className="font-medium text-large">Gestion de projet</h4>
-              <p className="text-tiny uppercase font-bold">Jira, Trello, GitHub, Notion</p>
+              <p className="text-tiny uppercase font-bold">
+                Jira, Trello, GitHub, Notion
+              </p>
             </CardHeader>
             <CardBody>
               <Image
@@ -248,10 +284,15 @@ export default function Home() {
               />
             </CardBody>
           </Card>
-          <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-7">
+          <Card
+            isFooterBlurred
+            className="w-full h-[300px] col-span-12 sm:col-span-7"
+          >
             <CardHeader className="absolute z-10 top-1 flex-col items-start">
               <h4 className="text-white/90 font-medium text-xl">Game Dev</h4>
-              <p className="text-tiny text-white/60 uppercase font-bold">Unity, Unreal Engine 5, Blender</p>
+              <p className="text-tiny text-white/60 uppercase font-bold">
+                Unity, Unreal Engine 5, Blender
+              </p>
             </CardHeader>
             <Image
               removeWrapper
@@ -262,7 +303,6 @@ export default function Home() {
           </Card>
         </div>
       </div>
-
     </section>
   );
 }

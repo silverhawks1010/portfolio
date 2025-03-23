@@ -52,23 +52,36 @@ export default function RootLayout({
             </main>
             <footer className="w-full flex flex-col items-center justify-center py-3">
               <p className="flex items-center gap-1 text-current">
-                <span className="text-default-600">&copy; Tout droits réservé, </span>
+                <span className="text-default-600">
+                  &copy; Tout droits réservé,{" "}
+                </span>
                 <span className="text-secondary">Kévin Maublanc</span>
                 <span className="text-default-600">, 2025 </span>
               </p>
               <div className="flex flex-row gap-5">
-                <Link isExternal aria-label="X" href="https://x.com/_SilverHawks_">
+                <Link
+                  isExternal
+                  aria-label="X"
+                  href="https://x.com/_SilverHawks_"
+                >
                   <FaXTwitter className="text-default-500" />
                 </Link>
-                <Link isExternal aria-label="Linkdin" href="https://www.linkedin.com/in/kevinmaublanc/">
+                <Link
+                  isExternal
+                  aria-label="Linkdin"
+                  href="https://www.linkedin.com/in/kevinmaublanc/"
+                >
                   <FaLinkedinIn className="text-default-500" />
                 </Link>
-                <Link isExternal aria-label="Github" href="https://github.com/silverhawks1010">
+                <Link
+                  isExternal
+                  aria-label="Github"
+                  href="https://github.com/silverhawks1010"
+                >
                   <FaGithub className="text-default-500" />
                 </Link>
                 <ThemeSwitch />
               </div>
-
             </footer>
           </div>
         </Providers>

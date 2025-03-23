@@ -18,8 +18,6 @@ import { ThemeSwitch } from "@/components/theme-switch";
 import Image from "next/image";
 
 export const Navbar = () => {
-
-
   return (
     <HeroUINavbar maxWidth="xl" position="sticky">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
@@ -39,10 +37,18 @@ export const Navbar = () => {
           <Link isExternal aria-label="X" href="https://x.com/_SilverHawks_">
             <FaXTwitter className="text-default-500" />
           </Link>
-          <Link isExternal aria-label="Linkdin" href="https://www.linkedin.com/in/kevinmaublanc/">
+          <Link
+            isExternal
+            aria-label="Linkdin"
+            href="https://www.linkedin.com/in/kevinmaublanc/"
+          >
             <FaLinkedinIn className="text-default-500" />
           </Link>
-          <Link isExternal aria-label="Github" href="https://github.com/silverhawks1010">
+          <Link
+            isExternal
+            aria-label="Github"
+            href="https://github.com/silverhawks1010"
+          >
             <FaGithub className="text-default-500" />
           </Link>
           <ThemeSwitch />
@@ -63,15 +69,22 @@ export const Navbar = () => {
         <Link isExternal aria-label="X" href="https://x.com/_SilverHawks_">
           <FaXTwitter className="text-default-500" />
         </Link>
-        <Link isExternal aria-label="Linkdin" href="https://www.linkedin.com/in/kevinmaublanc/">
+        <Link
+          isExternal
+          aria-label="Linkdin"
+          href="https://www.linkedin.com/in/kevinmaublanc/"
+        >
           <FaLinkedinIn className="text-default-500" />
         </Link>
-        <Link isExternal aria-label="Github" href="https://github.com/silverhawks1010">
+        <Link
+          isExternal
+          aria-label="Github"
+          href="https://github.com/silverhawks1010"
+        >
           <FaGithub className="text-default-500" />
         </Link>
         <ThemeSwitch />
       </NavbarContent>
-
     </HeroUINavbar>
   );
 };
