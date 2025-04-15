@@ -6,8 +6,8 @@ import { SwitchProps, useSwitch } from "@heroui/switch";
 import { useTheme } from "next-themes";
 import { useIsSSR } from "@react-aria/ssr";
 import clsx from "clsx";
-import { RiSunFill } from "react-icons/ri";
-import { FaMoon } from "react-icons/fa";
+
+import { SunFilledIcon, MoonFilledIcon } from "@/components/icons";
 
 export interface ThemeSwitchProps {
   className?: string;
@@ -70,7 +70,11 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
           ),
         })}
       >
-        {!isSelected || isSSR ? <RiSunFill size={22} /> : <FaMoon size={22} />}
+        {!isSelected || isSSR ? (
+          <SunFilledIcon size={22} />
+        ) : (
+          <MoonFilledIcon size={22} />
+        )}
       </div>
     </Component>
   );

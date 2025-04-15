@@ -77,7 +77,7 @@ export default function Home() {
             </Snippet>
           </div>
         </div>
-        <Avatar isBordered alt="hero" className="w-1/5 h-1/3 hidden md:block" src="/moi.png" />
+        <Avatar isBordered alt="hero" className="w-1/5 h-1/3" src="/moi.png" />
       </div>
       <Spacer y={10} />
       <Divider />
@@ -185,7 +185,7 @@ export default function Home() {
         <AccordionItem
           aria-label="Cap'Tain"
           startContent={
-            <Avatar isBordered color="primary" radius="lg" src="/captain.png" />
+            <Avatar isBordered color="warning" radius="lg" src="/captain.png" />
           }
           subtitle={
             <p className="flex">
