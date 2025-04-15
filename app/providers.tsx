@@ -31,6 +31,7 @@ export function Providers({ children, themeProps }: ProvidersProps) {
       <SpeedInsights />
       <Analytics/>
       <ToastProvider />
+
       <NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
     </HeroUIProvider>
   );
