@@ -66,6 +66,17 @@ export default function Home() {
               <FaXTwitter size={20} />
               Twitter
             </Link>
+            <Link
+              isExternal
+              className={buttonStyles({
+                color: "primary",
+                radius: "full",
+                variant: "shadow",
+              })}
+              href="/cv.pdf"
+            >
+              Mon CV
+            </Link>
           </div>
 
           <div className="mt-8">
