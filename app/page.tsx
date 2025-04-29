@@ -88,7 +88,7 @@ export default function Home() {
             </Snippet>
           </div>
         </div>
-        <Avatar isBordered alt="hero" className="w-1/5 h-1/3" src="/moi.png" />
+        <Avatar isBordered alt="hero" className="w-1/5 h-1/3 hidden md:block" src="/moi.png" />
       </div>
       <Spacer y={10} />
       <Divider />
