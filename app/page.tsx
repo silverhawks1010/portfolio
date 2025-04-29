@@ -29,7 +29,7 @@ export default function Home() {
               Développeur français de site internet et logiciel.
             </div>
           </div>
-          <div className="flex gap-3">
+          <div className="flex flex-warp gap-3">
             <Link
               isExternal
               className={buttonStyles({
