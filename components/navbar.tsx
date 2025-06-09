@@ -57,15 +57,11 @@ export const Navbar = () => {
         <NavbarItem className="hidden md:flex">
           <Button
             className="text-sm font-normal text-default-600 bg-default-100"
-            href="/"
+            href="/contact"
             startContent={<GrContact className="text-danger" />}
             variant="flat"
             onPress={() =>
-              addToast({
-                title: "Erreur",
-                description: "Le formulaire de contact est en développement !",
-                color: "danger",
-              })
+              window.location.href = "/contact"
             }
           >
             Contact
