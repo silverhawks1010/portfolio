@@ -126,7 +126,7 @@ export default function Home() {
           </Chip>{" "}
           <Chip color="primary" size="sm">
             TailwindCSS
-          </Chip>
+          </Chip>{" "}
           <Chip color="primary" size="sm">
             Supabase
           </Chip>
@@ -148,12 +148,12 @@ export default function Home() {
           </Link>
         </AccordionItem>
         <AccordionItem
-          aria-label="Gam'Ex"
+          aria-label="Game Area"
           startContent={
-            <Avatar isBordered color="secondary" radius="lg" src="" />
+            <Avatar isBordered color="secondary" radius="lg" src="/icon-gameare-notxt.png" />
           }
-          subtitle="Site internet de gestion de liste de jeux vidéos."
-          title="Gam'Ex"
+          subtitle="Site internet de gestion de liste de jeux vidéos, tier list et mini-jeux."
+          title="Game Area"
         >
           <p className="text-md">Description :</p>
           <p className="text-sm">
@@ -172,25 +172,28 @@ export default function Home() {
           </Chip>{" "}
           <Chip color="primary" size="sm">
             TailwindCSS
-          </Chip>
+          </Chip>{" "}
           <Chip color="primary" size="sm">
             Supabase
-          </Chip>
+          </Chip>{" "}
+          <Chip color="primary" size="sm">
+            Api IGDB
+          </Chip>{" "}
           <Spacer y={2} />
           <p className="text-md">Status : </p>
-          <Chip color="default" size="sm">
-            Projet naissant
+          <Chip color="secondary" size="sm">
+            Alpha
           </Chip>
           <Spacer y={2} />
           <p className="text-md">Accès : </p>
-          <Link isDisabled isExternal href="">
+          <Link isExternal href="https://gamearea.fr">
             {" "}
             <FaExternalLinkAlt /> <Spacer x={1} /> Lien vers le site
           </Link>
           <br />
           <Link isDisabled isExternal href="">
             {" "}
-            <FaGithub /> <Spacer x={1} /> Lien vers le github
+            <FaGithub /> <Spacer x={1} /> Lien vers le github (Non open source)
           </Link>
         </AccordionItem>
         <AccordionItem
