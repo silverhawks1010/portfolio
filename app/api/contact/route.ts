@@ -1,25 +1,23 @@
 import { NextResponse } from "next/server";
-import { Resend } from 'resend';
+import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   try {
-    const { nom, prenom, email, objet, type, societe, message } = await req.json();
+    const { nom, prenom, email, objet, type, societe, message } =
+      await req.json();
 
     // Vérifier les variables d'environnement
     if (!process.env.RESEND_API_KEY || !process.env.MAIL_TO) {
-      console.error("Variables d'environnement manquantes:", {
-        RESEND_API_KEY: !!process.env.RESEND_API_KEY,
-        MAIL_TO: !!process.env.MAIL_TO
-      });
-      return NextResponse.json({ 
-        success: false, 
-        error: "Configuration email manquante" 
-      }, { status: 500 });
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Configuration email manquante",
+        },
+        { status: 500 },
+      );
     }
-
-    console.log("Envoi de l'email via Resend...");
 
     const htmlEmail = `
       <!DOCTYPE html>
@@ -65,12 +63,16 @@ export async function POST(req: Request) {
                 <div class="label">📋 Type de contact</div>
                 <div class="value">${type === "boite" ? "Entreprise" : "Personnel"}</div>
               </div>
-              ${societe ? `
+              ${
+                societe
+                  ? `
               <div class="info-item">
                 <div class="label">🏢 Société</div>
                 <div class="value">${societe}</div>
               </div>
-              ` : ''}
+              `
+                  : ""
+              }
             </div>
             
             <div class="message-box">
@@ -78,7 +80,7 @@ export async function POST(req: Request) {
               <div class="value">${objet}</div>
               
               <div class="label">💬 Message</div>
-              <div class="value">${message.replace(/\n/g, '<br>')}</div>
+              <div class="value">${message.replace(/\n/g, "<br>")}</div>
             </div>
             
             <div class="footer">
@@ -92,7 +94,7 @@ export async function POST(req: Request) {
     `;
 
     const { data, error } = await resend.emails.send({
-      from: 'Contact <contact@mail.gamearea.fr>',
+      from: "Contact <contact@mail.gamearea.fr>",
       to: [process.env.MAIL_TO],
       replyTo: email,
       subject: `Nouveau message: ${objet}`,
@@ -101,14 +103,17 @@ export async function POST(req: Request) {
     });
 
     if (error) {
-      console.error("Erreur Resend:", error);
-      return NextResponse.json({ success: false, error: error.message }, { status: 500 });
+      return NextResponse.json(
+        { success: false, error: error.message },
+        { status: 500 },
+      );
     }
 
-    console.log("Email envoyé avec succès via Resend:", data?.id);
     return NextResponse.json({ success: true, messageId: data?.id });
   } catch (error: any) {
-    console.error("Erreur lors de l'envoi d'email:", error);
-    return NextResponse.json({ success: false, error: error.message }, { status: 500 });
+    return NextResponse.json(
+      { success: false, error: error.message },
+      { status: 500 },
+    );
   }
-} 
+}

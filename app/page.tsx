@@ -88,9 +88,63 @@ export default function Home() {
             </Snippet>
           </div>
         </div>
-        <Avatar isBordered alt="hero" className="w-1/5 h-1/3 hidden md:block" src="/moi.png" />
+        <Avatar
+          isBordered
+          alt="hero"
+          className="w-1/5 h-1/3 hidden md:block"
+          src="/moi.png"
+        />
       </div>
       <Spacer y={10} />
+      <Divider />
+      <Spacer y={3} />
+
+      <p className="text-center">
+        <span className={title()}>Mes&nbsp;</span>
+        <span className={title({ color: "violet" })}>Certifications&nbsp;</span>
+      </p>
+
+      <Spacer y={10} />
+
+      <div className="flex justify-center pb-3">
+        <div className="max-w-[600px] gap-4 grid grid-cols-1 sm:grid-cols-2 px-8">
+          <Card className="h-[200px]">
+            <CardHeader className="z-10 top-1 flex-col !items-start">
+              <h4 className="font-medium text-large">SecNumAcademie</h4>
+              <p className="text-tiny uppercase font-bold">
+                Cybersécurité et bonnes pratiques
+              </p>
+            </CardHeader>
+            <CardBody>
+              <Image
+                removeWrapper
+                alt="Logo SecNumAcademie"
+                className="z-0 w-full h-full object-contain"
+                src="/logo_secnum.webp"
+              />
+            </CardBody>
+          </Card>
+          <Card className="h-[200px]">
+            <CardHeader className="z-10 top-1 flex-col !items-start">
+              <h4 className="font-medium text-large">Atelier RGPD</h4>
+              <p className="text-tiny uppercase font-bold">
+                Protection des données personnelles
+              </p>
+            </CardHeader>
+            <CardBody>
+              <Image
+                removeWrapper
+                alt="Logo Atelier RGPD"
+                className="z-0 w-full h-full object-contain"
+                src="/atelierRGPD_HD_fond_transparent.webp"
+              />
+            </CardBody>
+          </Card>
+        </div>
+      </div>
+
+      <Spacer y={10} />
+
       <Divider />
       <Spacer y={3} />
       <p className="text-center">
@@ -150,7 +204,12 @@ export default function Home() {
         <AccordionItem
           aria-label="Game Area"
           startContent={
-            <Avatar isBordered color="secondary" radius="lg" src="/icon-gameare-notxt.png" />
+            <Avatar
+              isBordered
+              color="secondary"
+              radius="lg"
+              src="/icon-gameare-notxt.png"
+            />
           }
           subtitle="Site internet de gestion de liste de jeux vidéos, tier list et mini-jeux."
           title="Game Area"

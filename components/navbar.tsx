@@ -14,9 +14,7 @@ import { FaGithub } from "react-icons/fa";
 import { GrContact } from "react-icons/gr";
 import Image from "next/image";
 
-import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
-import { addToast } from "@heroui/toast";
 
 export const Navbar = () => {
   return (
@@ -60,9 +58,7 @@ export const Navbar = () => {
             href="/contact"
             startContent={<GrContact className="text-danger" />}
             variant="flat"
-            onPress={() =>
-              window.location.href = "/contact"
-            }
+            onPress={() => (window.location.href = "/contact")}
           >
             Contact
           </Button>
