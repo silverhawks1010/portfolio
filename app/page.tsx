@@ -107,7 +107,7 @@ export default function Home() {
       <Spacer y={10} />
 
       <div className="flex justify-center pb-3">
-        <div className="max-w-[600px] gap-4 grid grid-cols-1 sm:grid-cols-2 px-8">
+        <div className="max-w-[900px] gap-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-8">
           <Card className="h-[200px]">
             <CardHeader className="z-10 top-1 flex-col !items-start">
               <h4 className="font-medium text-large">SecNumAcademie</h4>
@@ -137,6 +137,27 @@ export default function Home() {
                 alt="Logo Atelier RGPD"
                 className="z-0 w-full h-full object-contain"
                 src="/atelierRGPD_HD_fond_transparent.webp"
+              />
+            </CardBody>
+          </Card>
+          <Card className="h-[200px]">
+            <CardHeader className="z-10 top-1 flex-col !items-start">
+              <div className="flex items-center gap-2">
+                <h4 className="font-medium text-large">Bug Bounty Hunter</h4>
+                <Chip color="warning" size="sm">
+                  En cours
+                </Chip>
+              </div>
+              <p className="text-tiny uppercase font-bold">
+                HackTheBox - Cybersécurité offensive
+              </p>
+            </CardHeader>
+            <CardBody>
+              <Image
+                removeWrapper
+                alt="Logo HackTheBox"
+                className="z-0 w-full h-full object-contain"
+                src="/huntercertif.webp"
               />
             </CardBody>
           </Card>
